@@ -3,7 +3,7 @@
 var userInput = function () {
   $('inputOne').submit(function(e)( {
     e.preventDefault();
-    $('').
+    $(' ').
     );
   }
 
