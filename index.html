@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
 
+  <head>
+    <meta charset="utf-8">
+    <title>YouTube API Tutorial</title>
+    <link rel="stylesheet" href="vendor/styles/css/bootstrap.css">
+    <link rel="stylesheet" href="vendor/styles/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="styles/layout.css">
+  </head>
+
+  <body>
+
+    <nav role="navigation" class="navbar navbar-default">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <section class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </section>
+        <!-- Collection of nav links and other content for toggling -->
+        <section id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Learn</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </section>
+    </nav>
+
+    <main class="container">
+
+    <section>
+      <h2>About APIs</h2>
+      <p>
+        An Application Programming Interface (API) is an interface that provides developers access to a application's functionality so that a developer can write customized applications to it. An example of an API is a web browser's Document Object Model (DOM) which is the web browser's API that allows scripts to access and change its contents. There are many other types of APIs published for just about any software "product" or "platform", for example Microsoft Office, Google Maps, or even Facebook, all of which allows a developer to create interesting projects that interface with what these APIs have to offer.
+      </p>
+    </section>
+
+    <section>
+      <h2>YouTube API</h2>
+      <p>
+        YouTube is a popular website that allows people to view, create, and share videos. Our team would like this to be an educational website for Code Fellows students to learn about APIs by investigating YouTube's API.
+      </p>
+    </section>
+
+    <section>
+      <h3>Choose a Programming Language!</h3>
+      <p>
+        Code Fellows offers many courses covering the three basic languages of web design (HTML, CSS, and Javascript), to specific languages including Ruby, Python, and Objective C and Swift (for iOS Development). By using the following form you can discover interesting educational vidoes from YouTube.
+      </p>
+      <p>
+        On the next page, we will explain how this works!
+      </p>
+    </section>
+
+    <section>
+      <form class="videoselection" action="index.html" method="post">
+        <ul class="list-unstyled">
+          <li><input type="radio" name="prglanguage" value="html">HTML</li>
+          <li><input type="radio" name="prglanguage" value="css">CSS</li>
+          <li><input type="radio" name="prglanguage" value="javascript">JavaScript</li>
+          <li><input type="radio" name="prglanguage" value="ruby">Ruby</li>
+          <li><input type="radio" name="prglanguage" value="python">Python</li>
+          <li><input type="radio" name="prglanguage" value="objectivec">Object C</li>
+          <li><input type="radio" name="prglanguage" value="swift">Swift</li>
+        </ul>
+      </form>
+    </section>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="vendor/styles/js/bootstrap.js"></script>
+    <script src="vendor/scripts/handlebars.js"></script>
+    <script src="vendor/scripts/page.js"></script>
+    <script src="scripts/index.js"></script>
+
+  </body>
+
+</html>
