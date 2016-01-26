@@ -36,7 +36,7 @@
     <section>
       <h2>About APIs</h2>
       <p>
-        An Application Programming Interface (API) is an interface that provides developers access to a application's functionality so that a developer can write customized applications to it. An example of an API is a web browser's Document Object Model (DOM) which is the web browser's API that allows scripts to access and change its contents. There are many other types of APIs published for just about any software "product" or "platform", for example Microsoft Office, Google Maps, or even Facebook, all of which allows a developer to create interesting projects that interface with what these APIs have to offer.
+        An Application Programming Interface (API) is an interface that provides developers access to a application's functionality so that a developer can write customized applications to it. An example of an API is a web browser's Document Object Model (DOM) which is the web browser's API that allows scripts to access and change its contents. There are many other types of APIs published for just about any software "product" or "platform", for example Apple OS X, Microsoft Office, Google Maps, or even Facebook, all of which allows a developer to create interesting projects that interface with what these APIs have to offer.
       </p>
     </section>
 
@@ -50,7 +50,7 @@
     <section>
       <h3>Choose a Programming Language!</h3>
       <p>
-        Code Fellows offers many courses covering the three basic languages of web design (HTML, CSS, and Javascript), to specific languages including Ruby, Python, and Objective C and Swift (for iOS Development). By using the following form you can discover interesting educational vidoes from YouTube.
+        Code Fellows offers many courses covering the three basic languages of web design (HTML, CSS, and Javascript), to specific languages including Ruby, Python, and Objective-C and Swift (for iOS Development). By using the following form you can discover interesting educational videos from YouTube.
       </p>
       <p>
         On the next page, we will explain how this works!
@@ -58,17 +58,20 @@
     </section>
 
     <section>
-      <form class="videoselection" action="index.html" method="post">
+      <form id="VideoSelection" action="index.html" method="post">
         <ul class="list-unstyled">
-          <li><input type="radio" name="prglanguage" value="html">HTML</li>
-          <li><input type="radio" name="prglanguage" value="css">CSS</li>
-          <li><input type="radio" name="prglanguage" value="javascript">JavaScript</li>
-          <li><input type="radio" name="prglanguage" value="ruby">Ruby</li>
-          <li><input type="radio" name="prglanguage" value="python">Python</li>
-          <li><input type="radio" name="prglanguage" value="objectivec">Object C</li>
-          <li><input type="radio" name="prglanguage" value="swift">Swift</li>
+          <li><input type="radio" name="prglanguage" id="html" value="html">HTML</li>
+          <li><input type="radio" name="prglanguage" id="css" value="css">CSS</li>
+          <li><input type="radio" name="prglanguage" id="javascript" value="javascript">JavaScript</li>
+          <li><input type="radio" name="prglanguage" id="ruby" value="ruby">Ruby</li>
+          <li><input type="radio" name="prglanguage" id="python" value="python">Python</li>
+          <li><input type="radio" name="prglanguage" id="objectivec" value="objectivec">Objective-C (for iOS)</li>
+          <li><input type="radio" name="prglanguage" id="swift" value="swift">Swift (for iOS)</li>
         </ul>
       </form>
+      <section id="VideoResults">
+        <ul class="list-unstyled"></ul>
+      </section>
     </section>
 
     </main>
