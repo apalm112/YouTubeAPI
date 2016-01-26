@@ -1,0 +1,25 @@
+{
+  "name": "youtubeapi",
+  "version": "1.0.0",
+  "description": "final project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apalm112/YouTubeAPI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apalm112/YouTubeAPI/issues"
+  },
+  "homepage": "https://github.com/apalm112/YouTubeAPI#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "express-request-proxy": "^1.1.0"
+  },
+  "devDependencies": {},
+  "keywords": []
+}
