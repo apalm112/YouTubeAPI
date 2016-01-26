@@ -2,7 +2,7 @@
   "name": "youtubeapi",
   "version": "1.0.0",
   "description": "final project",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/apalm112/YouTubeAPI/issues"
   },
-  "homepage": "https://github.com/apalm112/YouTubeAPI#readme"
+  "homepage": "https://github.com/apalm112/YouTubeAPI#readme",
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": []
 }
