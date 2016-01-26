@@ -16,7 +16,10 @@
     "url": "https://github.com/apalm112/YouTubeAPI/issues"
   },
   "homepage": "https://github.com/apalm112/YouTubeAPI#readme",
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.13.4",
+    "express-request-proxy": "^1.1.0"
+  },
   "devDependencies": {},
   "keywords": []
 }
