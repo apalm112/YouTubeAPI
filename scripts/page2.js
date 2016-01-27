@@ -8,13 +8,21 @@
     $('.button').on('click', function() {
       console.log('button click');
       $('.videoResults').empty();
+      var $firstParam = $('.inputOne').val();
+      var $secondParam = $('.inputTwo').val();
+
+      console.log($firstParam);
+      console.log($secondParam);
+
+
+
       videoList.requestVideos = function() {
         $.get(
           'https://www.googleapis.com/youtube/v3/search',
           {
             part: 'snippet',
             maxResults: 1,
-            q: 'html',
+            q: 'funny cats',
             order: 'viewCount',
             key: 'AIzaSyCPIPcf2n-VyIyKO8KpMMMv5Ap2VxU_Tis'
           },
