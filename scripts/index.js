@@ -2,6 +2,7 @@
   var videoList = {};
   var videoHeight = 900;
   var videoWidth = 900;
+
   videoList.getHTML = function() {
     $('body').on('click', '#html', function(e) {
       emptyResults();
@@ -20,6 +21,13 @@
             videoId = item.id.videoId;
             videoOutput = '<li><iframe height="'+videoHeight+'" width="'+videoWidth+'" src=\"//www.youtube.com/embed/'+videoId+'\"></iframe></li>';
             $('#VideoResults').append(videoOutput);
+
+            var pageSource = $('#video-template').html();
+            var compiledTemplate = Handlebars.compile(pageSource);
+            var context = {"title": videoTitle};
+            var html = compiledTemplate(context);
+            $('#VideoResults').append(html);
+
           });
         }
       )
