@@ -1,7 +1,7 @@
 (function (module) {
   var videoList = {};
-  var videoHeight = 400;
-  var videoWidth = 500;
+  var videoHeight = 900;
+  var videoWidth = 900;
   videoList.getHTML = function() {
     $('body').on('click', '#html', function(e) {
       emptyResults();
@@ -170,7 +170,7 @@
       )
     })
   };
-  
+
  function emptyResults() {
    $('#VideoResults').empty();
  }
