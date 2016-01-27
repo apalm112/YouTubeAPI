@@ -4,6 +4,7 @@
     <title>Learn API's</title>
     <link rel="stylesheet" type="text/css" href="vendor/styles/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="vendor/styles/css/bootstrap-theme.css">
+    <link rel="stylesheet" type="text/css" href="styles/la">
   </head>
   <body>
     <nav role="navigation" class="navbar navbar-default">
@@ -17,9 +18,9 @@
       </section>
       <section id="navbarCollapse" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="/index">Home</a></li>
           <li class="active"><a href="#">Learn</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="/about">About</a></li>
         </ul>
       </section>
     </nav>
@@ -29,19 +30,17 @@
         <container>
           <p>
             Text here showing example of how to run an API in code.
-            </br> <!--remove this break-->
-            First Input  Second Input
           </p>
         </container>
       </section>
-      <form class="user-input">
-        <input class="inputOne" type="text" value="Search option 1"></input>
-        <input class="inputTwo" type="text"></input>
-      </form>
-      <input type="submit" value="Submit" class="input">
-      <section>
+      <section class="userInput">
+        <input class="inputOne" type="text" placeholder="Search option 1">
+        <input class="inputTwo" type="text" placeholder="Search option 2">
+        <input type="submit" value="Submit" class="button">
+      </section>
+      <section class="videoResults">
         <p>JSON file data here.</p>
-        <ul class="list-unstyled"></ul>
+        <ul class="videoDisplay"></ul>
       </section>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
