@@ -7,25 +7,25 @@
     console.log('html clicked');
     $('#VideoResults').empty();
     videoList.requestVideos = function() {
-        $.get(
-          'https://www.googleapis.com/youtube/v3/search',{
-          part: 'snippet',
-          maxResults: 3,
-          q: 'html+learn+programming',
-          order: 'viewCount',
-          key: 'AIzaSyCPIPcf2n-VyIyKO8KpMMMv5Ap2VxU_Tis'},
-          function(data) {
-            var videoOutput;
-            $.each(data.items, function(i, item) {
-              console.log(item);
-              videoTitle = item.snippet.title;
-              videoId = item.id.videoId;
-              videoOutput = '<li><iframe height="'+videoHeight+'" width="'+videoWidth+'" src=\"//www.youtube.com/embed/'+videoId+'\"></iframe></li>';
-              $('#VideoResults').append(videoOutput);
-            });
-          }
-        )
-      }
+      $.get(
+        'https://www.googleapis.com/youtube/v3/search',{
+        part: 'snippet',
+        maxResults: 3,
+        q: 'html+learn+programming',
+        order: 'viewCount',
+        key: 'AIzaSyCPIPcf2n-VyIyKO8KpMMMv5Ap2VxU_Tis'},
+        function(data) {
+          var videoOutput;
+          $.each(data.items, function(i, item) {
+            console.log(item);
+            videoTitle = item.snippet.title;
+            videoId = item.id.videoId;
+            videoOutput = '<li><iframe height="'+videoHeight+'" width="'+videoWidth+'" src=\"//www.youtube.com/embed/'+videoId+'\"></iframe></li>';
+            $('#VideoResults').append(videoOutput);
+          });
+        }
+      )
+     }
     videoList.requestVideos();
   });
 
