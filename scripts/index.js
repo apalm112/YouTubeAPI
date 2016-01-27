@@ -2,7 +2,7 @@
   var videoList = {};
 
   // videoList.all = []; do we need an array??
-
+ 
   $('#html').on('click', function() {
     console.log('HTML clicked!');
     videoList.requestVideos = function() {
