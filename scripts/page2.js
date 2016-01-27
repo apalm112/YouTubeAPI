@@ -3,8 +3,6 @@
   var videoHeight = 375;
   var videoWidth = 375;
 
- // var getVideo = function (inputOne, inputTwo) {
-     // pass input text by user to the search params for requestVideos function
     $('.button').on('click', function() {
       console.log('button click');
       $('.videoResults').empty();
@@ -14,18 +12,15 @@
       console.log($firstParam);
       console.log($secondParam);
 
-
-
       videoList.requestVideos = function() {
-        var $firstParam = $('.inputOne').val();
+        var $firstParam = $('.inputOne').val();  //sets user input to variable
         var $secondParam = $('.inputTwo').val();
-
         $.get(
           'https://www.googleapis.com/youtube/v3/search',
           {
             part: 'snippet',
             maxResults: 1,
-            q: $firstParam, $secondParam,
+            q: $firstParam+$secondParam,
             order: 'viewCount',
             key: 'AIzaSyCPIPcf2n-VyIyKO8KpMMMv5Ap2VxU_Tis'
           },
