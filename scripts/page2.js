@@ -17,12 +17,15 @@
 
 
       videoList.requestVideos = function() {
+        var $firstParam = $('.inputOne').val();
+        var $secondParam = $('.inputTwo').val();
+
         $.get(
           'https://www.googleapis.com/youtube/v3/search',
           {
             part: 'snippet',
             maxResults: 1,
-            q: 'funny cats',
+            q: $firstParam, $secondParam,
             order: 'viewCount',
             key: 'AIzaSyCPIPcf2n-VyIyKO8KpMMMv5Ap2VxU_Tis'
           },
