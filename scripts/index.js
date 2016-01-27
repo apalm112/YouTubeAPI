@@ -4,7 +4,7 @@
   var videoWidth = 500;
 
   $('#html').on('click', function() {
-    // console.log('HTML clicked!');
+    console.log('html clicked');
     $('#VideoResults').empty();
     videoList.requestVideos = function() {
         $.get(
@@ -17,7 +17,7 @@
           function(data) {
             var videoOutput;
             $.each(data.items, function(i, item) {
-              // console.log(item);
+              console.log(item);
               videoTitle = item.snippet.title;
               videoId = item.id.videoId;
               videoOutput = '<li><iframe height="'+videoHeight+'" width="'+videoWidth+'" src=\"//www.youtube.com/embed/'+videoId+'\"></iframe></li>';
@@ -30,7 +30,7 @@
   });
 
   $('#css').on('click', function() {
-      // console.log('CSS clicked!');
+      console.log('CSS clicked!');
       $('#VideoResults').empty();
       videoList.requestVideos = function() {
           $.get(
@@ -43,7 +43,7 @@
             function(data) {
               var videoOutput;
               $.each(data.items, function(i, item) {
-                // console.log(item);
+                console.log(item);
                 videoTitle = item.snippet.title;
                 videoId = item.id.videoId;
                 videoOutput = '<li><iframe height="'+videoHeight+'" width="'+videoWidth+'" src=\"//www.youtube.com/embed/'+videoId+'\"></iframe></li>';
@@ -56,7 +56,7 @@
   });
 
   $('#javascript').on('click', function() {
-      // console.log('JavaScript clicked!');
+      console.log('JavaScript clicked!');
       $('#VideoResults').empty();
       videoList.requestVideos = function() {
           $.get(
@@ -69,7 +69,7 @@
             function(data) {
               var videoOutput;
               $.each(data.items, function(i, item) {
-                // console.log(item);
+                console.log(item);
                 videoTitle = item.snippet.title;
                 videoId = item.id.videoId;
                 videoOutput = '<li><iframe height="'+videoHeight+'" width="'+videoWidth+'" src=\"//www.youtube.com/embed/'+videoId+'\"></iframe></li>';
@@ -82,7 +82,7 @@
   });
 
   $('#ruby').on('click', function() {
-      // console.log('Ruby clicked!');
+      console.log('Ruby clicked!');
       $('#VideoResults').empty();
       videoList.requestVideos = function() {
           $.get(
@@ -95,7 +95,7 @@
             function(data) {
               var videoOutput;
               $.each(data.items, function(i, item) {
-                // console.log(item);
+                console.log(item);
                 videoTitle = item.snippet.title;
                 videoId = item.id.videoId;
                 videoOutput = '<li><iframe height="'+videoHeight+'" width="'+videoWidth+'" src=\"//www.youtube.com/embed/'+videoId+'\"></iframe></li>';
@@ -108,7 +108,7 @@
   });
 
   $('#python').on('click', function() {
-      // console.log('Python clicked!');
+      console.log('Python clicked!');
       $('#VideoResults').empty();
       videoList.requestVideos = function() {
           $.get(
@@ -121,7 +121,7 @@
             function(data) {
               var videoOutput;
               $.each(data.items, function(i, item) {
-                // console.log(item);
+                console.log(item);
                 videoTitle = item.snippet.title;
                 videoId = item.id.videoId;
                 videoOutput = '<li><iframe height="'+videoHeight+'" width="'+videoWidth+'" src=\"//www.youtube.com/embed/'+videoId+'\"></iframe></li>';
@@ -134,7 +134,7 @@
   });
 
   $('#objectivec').on('click', function() {
-      // console.log('Objective C clicked!');
+      console.log('Objective C clicked!');
       $('#VideoResults').empty();
       videoList.requestVideos = function() {
           $.get(
@@ -147,7 +147,7 @@
             function(data) {
               var videoOutput;
               $.each(data.items, function(i, item) {
-                // console.log(item);
+                console.log(item);
                 videoTitle = item.snippet.title;
                 videoId = item.id.videoId;
                 videoOutput = '<li><iframe height="'+videoHeight+'" width="'+videoWidth+'" src=\"//www.youtube.com/embed/'+videoId+'\"></iframe></li>';
@@ -160,7 +160,7 @@
   });
 
   $('#swift').on('click', function() {
-      // console.log('Swift clicked!');
+      console.log('Swift clicked!');
       $('#VideoResults').empty();
       videoList.requestVideos = function() {
           $.get(
@@ -173,7 +173,7 @@
             function(data) {
               var videoOutput;
               $.each(data.items, function(i, item) {
-                // console.log(item);
+                console.log(item);
                 videoTitle = item.snippet.title;
                 videoId = item.id.videoId;
                 videoOutput = '<li><iframe height="'+videoHeight+'" width="'+videoWidth+'" src=\"//www.youtube.com/embed/'+videoId+'\"></iframe></li>';
