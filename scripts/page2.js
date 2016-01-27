@@ -2,8 +2,8 @@
   var videoList = {};
 
     $('.inputOne').submit(function(e) {
-      //e.preventDefault();
-      $('.inputOne').text()
+      e.preventDefault();
+      //$('.inputOne').text()
       videoList.requestVideos = function() {
         $.get(
           'https://www.googleapis.com/youtube/v3/search', {
@@ -26,7 +26,9 @@
       videoList.requestVideos();
     });
 
-  $('.input').submit(function(e) {
+
+
+  $('.button').on('click', function(e) {
     console.log('button click');
     e.preventDefault();
   });
