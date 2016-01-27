@@ -1,5 +1,5 @@
 (function(module) {
-  var videoList = {};
+  var videoShow = {};
   var videoHeight = 375;
   var videoWidth = 375;
 
@@ -12,7 +12,7 @@
       console.log($firstParam);
       console.log($secondParam);
 
-      videoList.requestVideos = function() {
+      videoShow.requestVid = function() {
         var $firstParam = $('.inputOne').val();  //sets user input to variable
         var $secondParam = $('.inputTwo').val();
         $.get(
@@ -32,11 +32,11 @@
             videoId = item.id.videoId;
             videoOutput = '<li><iframe height="' + videoHeight + '" width="' + videoWidth + '" src=\"//www.youtube.com/embed/' + videoId + '\"></iframe></li>';
             $('.videoResults').append(videoOutput);
-          })
+            $('.jsonData').append().text(item.snippet.title);
+              });
+            });
+          }
+          videoShow.requestVid();
         })
-      }
-      videoList.requestVideos();
-    })
-
-  module.videoList = videoList;
+  module.videoShow = videoShow;
 })(window);
