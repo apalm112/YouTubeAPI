@@ -31,11 +31,18 @@
             videoTitle = item.snippet.title;
             videoId = item.id.videoId;
             videoOutput = '<li><iframe height="' + videoHeight + '" width="' + videoWidth + '" src=\"//www.youtube.com/embed/' + videoId + '\"></iframe></li>';
-            $('.videoResults').append(videoOutput);
+          //  $('.videoResults').append(videoOutput);
+            $('.jsonData').append(item);
           })
         })
       }
       videoList.requestVideos();
+
+      /*$.get('item', function (response) {
+        var $footer = $('.jsonData');
+        $footer.html(response);
+      });*/
+
     })
 
   module.videoList = videoList;
