@@ -7,14 +7,14 @@
      // pass input text by user to the search params for requestVideos function
     $('.button').on('click', function() {
       console.log('button click');
-      $('videoResults').empty();
+      $('.videoResults').empty();
       videoList.requestVideos = function() {
         $.get(
           'https://www.googleapis.com/youtube/v3/search',
           {
             part: 'snippet',
-            maxResults: 2,
-            q: 'html', //inputOne & inputTwo
+            maxResults: 1,
+            q: 'html',
             order: 'viewCount',
             key: 'AIzaSyCPIPcf2n-VyIyKO8KpMMMv5Ap2VxU_Tis'
           },
@@ -25,7 +25,7 @@
             videoTitle = item.snippet.title;
             videoId = item.id.videoId;
             videoOutput = '<li><iframe height="' + videoHeight + '" width="' + videoWidth + '" src=\"//www.youtube.com/embed/' + videoId + '\"></iframe></li>';
-            $('videoResults').append(videoOutput);
+            $('.videoResults').append(videoOutput);
           })
         })
       }
