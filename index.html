@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="vendor/styles/css/bootstrap.css">
     <link rel="stylesheet" href="vendor/styles/css/bootstrap-theme.css">
     <link rel="stylesheet" href="styles/layout.css">
+
+    <script id="video-template" type="text/x-handlebars-template">
+        <h2>{{title}}</h2>
+    </script>
+
   </head>
 
   <body>
@@ -69,9 +74,12 @@
           <li><input type="radio" name="prglanguage" id="swift" value="swift">Swift (for iOS)</li>
         </ul>
       </form>
+
       <section id="VideoResults">
+
         <ul id="VideoDisplay"></ul>
       </section>
+
     </section>
 
     </main>
