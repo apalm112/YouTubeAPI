@@ -26,16 +26,13 @@
             var context = {"title": videoTitle};
             var html = compiledTemplate(context);
             $('#VideoResults').append(html);
-
             $('#VideoResults').append(videoOutput);
-
-
-
           });
         }
       )
     })
   };
+  
   videoList.getCSS = function() {
     $('body').on('click', '#css', function() {
       emptyResults();
