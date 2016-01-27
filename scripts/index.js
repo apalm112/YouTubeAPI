@@ -20,19 +20,19 @@
             videoTitle = item.snippet.title;
             videoId = item.id.videoId;
             videoOutput = '<li><iframe height="'+videoHeight+'" width="'+videoWidth+'" src=\"//www.youtube.com/embed/'+videoId+'\"></iframe></li>';
-            $('#VideoResults').append(videoOutput);
 
             var pageSource = $('#video-template').html();
             var compiledTemplate = Handlebars.compile(pageSource);
             var context = {"title": videoTitle};
             var html = compiledTemplate(context);
             $('#VideoResults').append(html);
-
+            $('#VideoResults').append(videoOutput);
           });
         }
       )
     })
   };
+  
   videoList.getCSS = function() {
     $('body').on('click', '#css', function() {
       emptyResults();
