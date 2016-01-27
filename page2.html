@@ -25,26 +25,86 @@
       </section>
     </nav>
     <main class="container">
-      <h2>Learn API's</h2>
-      <section class="row" id="about">
-        <container>
+      <h1>Code Explained</h1>
+
+      <section id="explain1">
+        <h2>Fixed Search</h2>
           <p>
-            Text here showing example of how to run an API in code.
+            In the index page a form with a list of Radio Controls makes the API calls to YouTube to request videos. Each of the 7 Radio Controls shares a Uniform Resource Locator (url) to make their requests, shares an authorization key, and has a unique search string that calls for a specific programming language.
           </p>
-        </container>
+          <p>
+            This section explains the code that supports the Radio Control form:
+          </p>
+
+          <ol>
+            <li>Start Fresh</li>
+              <p>
+                The first part of the code is a JQuery function that listens to the '#html' id as found in the web page as one of the Radio Controls. Once that form is clicked, it will run another JQuery statement to make sure that if a previous search result exists, "empty" them so that only the new query results are displayed.
+                <img class="img-responsive" src="img/YouTubeCode1.png" alt="YouTubeCodeSample1" />
+              </p>
+            <li>Call the API</li>
+              <p>
+                The next part of the code creates a "videoList.requestVideos" function that prepares an AJAX call with parameters to request videos:
+                <ol>
+                  <li>$.get prepares the call.</li>
+                  <li>A URL is specified to make the API call.</li>
+                  <li>'part' describes how the data properties are delivered in the response, in this case it is comma separated list, or a "snippet".</li>
+                  <li>'maxResults' displays the maximum number of videos to display</li>
+                  <li>'viewCount' is specifing the number of views a video has as one of the search criteria. Or, show me videos with the highest view count.</li>
+                  <li>'key' is the authorization key to ask for a request.</li>
+                </ol>
+                <img class="img-responsive" src="img/YouTubeCode2.png" alt="YouTubeCodeSample2" />
+              </p>
+            <li>Display the results</li>
+              <p>
+                After the API call has been made, another function is created to gather the response data to display the video to the browser:
+                <ol>
+                  <li>A variable called videoOutput is created to store the data to be displayed.</li>
+                  <li>$.each goes through each item returned in the response.</li>
+                  <li>videoId returns the videoId (the actual video in YouTube) collected from the resonse.</li>
+                  <li>videoId is then referenced by the videoOutput variable.</li>
+                  <li>The videoOutput variable (with the video ID) is then passed to the web browser using a JQuery function.</li>
+                  <li>The last line of this code calls (or executes) the videoList.requestVideos function.</li>
+                </ol>
+                <img class="img-responsive" src="img/YouTubeCode3.png" alt="YouTubeCodeSample3" />
+              </p>
+
+          </ol>
       </section>
-      <section class="userInput">
-        <input class="inputOne" type="text" placeholder="Search option 1">
-        <input class="inputTwo" type="text" placeholder="Search option 2">
-        <input type="submit" value="Submit" class="button">
-      </section>
+
       <section class="videoResults">
         <ul id="videoDisplay" class="img-responsive"></ul>
       </section>
       <section >
-        <p class="jsonData">JSON file data here.</p>
+
+
+
+      <section id="explain2">
+        <h2>Customized Search</h2>
+          <p>
+            The following form allows you to create a custom search based on a few parameters. When working with APIs you should consult the documentation reference guide to discover other possible features that you may use. In this case, "Search" is a specific YouTube API "resource".
+          </p>
+          <p>
+            There are many other API "resources" available for YouTube, for example perhaps you may want to focus on a YouTube "subscription" and write code that modifies a subscription, or use their "Activity" resource to track changes by a user or subscription. Here is a link to the complete list of <a href="https://developers.google.com/youtube/v3/docs/" target="_blank">YouTube API resources.</a>
+          </p>
+          <p>
+            For this second example, we will stay with the "Search" resource and explore a few more ways of finding videos based on a few parameters as made avaialble to "Search".
+          </p>
+
+        <section class="userInput">
+          <input class="inputOne" type="text" placeholder="Search option 1">
+          <input class="inputTwo" type="text" placeholder="Search option 2">
+          <input type="submit" value="Submit" class="button">
+        </section>
+        <section class="videoResults">
+           <p class="jsonData">JSON file data here.</p>
+          <ul class="videoDisplay"></ul>
+        </section>
+
       </section>
+
     </main>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
     <script src="vendor/styles/js/bootstrap.js"></script>
     <script src="scripts/page2.js"></script>
