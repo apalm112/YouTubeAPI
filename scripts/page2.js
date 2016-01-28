@@ -7,6 +7,7 @@
 
   videoShow.customQuery = function() {
     $('body').on('click', '.button', function() {
+      $('.jsonData').empty();
       var $firstParam = $('.inputOne').val();
       var $secondParam = $('.inputTwo').val();
 
