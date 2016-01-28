@@ -30,7 +30,6 @@
       function(data) {
         var videoOutput;
         $.each(data.items, function(i, item) {
-          console.log(item);
           videoTitle = item.snippet.title;
           videoId = item.id.videoId;
           videoOutput = '<li><iframe height="' + videoHeight + '" width="' + videoWidth + '" src=\"//www.youtube.com/embed/' + videoId + '\"></iframe></li>';
