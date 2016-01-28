@@ -15,6 +15,7 @@
         key: 'AIzaSyCPIPcf2n-VyIyKO8KpMMMv5Ap2VxU_Tis'},
         function(data) {
           var videoOutput;
+          emptyResults();
           $.each(data.items, function(i, item) {
             videoTitle = item.snippet.title;
             videoId = item.id.videoId;
@@ -42,6 +43,7 @@
         key: 'AIzaSyCPIPcf2n-VyIyKO8KpMMMv5Ap2VxU_Tis'},
         function(data) {
           var videoOutput;
+          emptyResults();
           $.each(data.items, function(i, item) {
             videoTitle = item.snippet.title;
             videoId = item.id.videoId;
@@ -69,6 +71,7 @@
         key: 'AIzaSyCPIPcf2n-VyIyKO8KpMMMv5Ap2VxU_Tis'},
         function(data) {
           var videoOutput;
+          emptyResults();
           $.each(data.items, function(i, item) {
             videoTitle = item.snippet.title;
             videoId = item.id.videoId;
@@ -96,6 +99,7 @@
         key: 'AIzaSyCPIPcf2n-VyIyKO8KpMMMv5Ap2VxU_Tis'},
         function(data) {
           var videoOutput;
+          emptyResults();
           $.each(data.items, function(i, item) {
             videoTitle = item.snippet.title;
             videoId = item.id.videoId;
@@ -123,6 +127,7 @@
         key: 'AIzaSyCPIPcf2n-VyIyKO8KpMMMv5Ap2VxU_Tis'},
         function(data) {
           var videoOutput;
+          emptyResults();
           $.each(data.items, function(i, item) {
             videoTitle = item.snippet.title;
             videoId = item.id.videoId;
@@ -150,6 +155,7 @@
         key: 'AIzaSyCPIPcf2n-VyIyKO8KpMMMv5Ap2VxU_Tis'},
         function(data) {
           var videoOutput;
+          emptyResults();
           $.each(data.items, function(i, item) {
             videoTitle = item.snippet.title;
             videoId = item.id.videoId;
@@ -177,6 +183,7 @@
         key: 'AIzaSyCPIPcf2n-VyIyKO8KpMMMv5Ap2VxU_Tis'},
         function(data) {
           var videoOutput;
+          emptyResults();
           $.each(data.items, function(i, item) {
             videoTitle = item.snippet.title;
             videoId = item.id.videoId;
@@ -185,6 +192,7 @@
             var compiledTemplate = Handlebars.compile(pageSource);
             var context = {"title": videoTitle};
             var html = compiledTemplate(context);
+            $('#VideoDisplay').empty();
             $('#VideoDisplay').append(html).append(videoOutput);
           });
         }
