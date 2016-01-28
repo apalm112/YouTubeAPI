@@ -192,7 +192,6 @@
             var compiledTemplate = Handlebars.compile(pageSource);
             var context = {"title": videoTitle};
             var html = compiledTemplate(context);
-            $('#VideoDisplay').empty();
             $('#VideoDisplay').append(html).append(videoOutput);
           });
         }

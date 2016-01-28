@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>Learn API's</title>
+    <link rel="icon" type="image/png" href="img/youtubeicon.png">
     <link rel="stylesheet" type="text/css" href="vendor/styles/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="vendor/styles/css/bootstrap-theme.css">
     <link rel="stylesheet" type="text/css" href="styles/la">
@@ -40,7 +41,7 @@
           <ol>
             <li>Start Fresh</li>
               <p>
-                The first part of the code is a JQuery function that finds to the '#html' id element as found in the web page as one of the Radio Controls. Once that form is clicked, it will run a statement to make sure that if a previous search result exists, to "emptyResults" so that only the new query results are displayed.
+                The first part of the code is creating an object called "videoList" to which a method is created using a JQuery function that finds the '#html' id element as one of the Radio Controls. Once that control is clicked, it will run a statement to make sure that if a previous search result exists, to "emptyResults" so that only the new query results are displayed.
                 <img class="img-responsive" src="img/YouTubeCode1.png" alt="YouTubeCodeSample1" />
               </p>
             <li>Call the API</li>
@@ -86,12 +87,12 @@
           </p>
 
         <section class="userInput">
-          <input class="inputOne" type="text" placeholder="Search option 1" name="inputOne">
-          <input class="inputTwo" type="text" placeholder="Search option 2" name="inputTwo">
+          <input class="inputOne" type="text" placeholder="Search options" name="inputOne">
+          <input class="inputTwo" type="text" placeholder="API Key" name="inputTwo">
           <input type="submit" value="Submit" class="button">
         </section>
         <section class="videoResults">
-          <ul></ul>
+          <ul id="searchResults"></ul>
         </section>
 
       </section>
