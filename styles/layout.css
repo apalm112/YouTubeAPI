@@ -5,6 +5,7 @@
 }
 input[type="radio"] {
   margin-right: 10px;
+  cursor: pointer;
 }
 iframe {
   max-width: 90%;
