@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="vendor/styles/css/bootstrap.css">
     <link rel="stylesheet" href="vendor/styles/css/bootstrap-theme.css">
     <link rel="stylesheet" href="styles/layout.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+    <script id="video-template" type="text/x-handlebars-template">
+        <h2>{{title}}</h2>
+    </script>
+
   </head>
 
   <body>
@@ -25,7 +31,7 @@
         <section id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="/">Home</a></li>
-                <li><a href="#">Learn</a></li>
+                <li><a href="/learn">Learn</a></li>
                 <li><a href="/about">About</a></li>
             </ul>
         </section>
@@ -69,9 +75,12 @@
           <li><input type="radio" name="prglanguage" id="swift" value="swift">Swift (for iOS)</li>
         </ul>
       </form>
+
       <section id="VideoResults">
-        <ul id="VideoDisplay"></ul>
+
+        <ul id="VideoDisplay" class="list-unstyled"></ul>
       </section>
+
     </section>
 
     </main>
@@ -82,7 +91,9 @@
     <script src="vendor/scripts/page.js"></script>
 
     <script src="scripts/index.js"></script>
+    <script src="scripts/page2.js"></script>
     <script src="scripts/indexController.js"></script>
+    <script src="scripts/learnController.js"></script>
     <script src="scripts/aboutController.js"></script>
 
     <script src="scripts/routes.js"></script>
