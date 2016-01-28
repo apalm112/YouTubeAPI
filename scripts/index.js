@@ -16,17 +16,14 @@
         function(data) {
           var videoOutput;
           $.each(data.items, function(i, item) {
-            console.log(item);
             videoTitle = item.snippet.title;
             videoId = item.id.videoId;
             videoOutput = '<li><iframe height="'+videoHeight+'" width="'+videoWidth+'" src=\"//www.youtube.com/embed/'+videoId+'\"></iframe></li>';
-
             var pageSource = $('#video-template').html();
             var compiledTemplate = Handlebars.compile(pageSource);
             var context = {"title": videoTitle};
             var html = compiledTemplate(context);
-            $('#VideoResults').append(html);
-            $('#VideoResults').append(videoOutput);
+            $('#VideoResults').append(html).append(videoOutput);
           });
         }
       )
@@ -46,17 +43,20 @@
         function(data) {
           var videoOutput;
           $.each(data.items, function(i, item) {
-            console.log(item);
             videoTitle = item.snippet.title;
             videoId = item.id.videoId;
             videoOutput = '<li><iframe height="'+videoHeight+'" width="'+videoWidth+'" src=\"//www.youtube.com/embed/'+videoId+'\"></iframe></li>';
-            $('#VideoResults').append(videoOutput);
-            console.log("css!")
+            var pageSource = $('#video-template').html();
+            var compiledTemplate = Handlebars.compile(pageSource);
+            var context = {"title": videoTitle};
+            var html = compiledTemplate(context);
+            $('#VideoResults').append(html).append(videoOutput);
           });
         }
       )
     })
   };
+
   videoList.getJavaScript = function() {
     $('body').on('click', '#javascript', function(){
       emptyResults();
@@ -74,13 +74,17 @@
             videoTitle = item.snippet.title;
             videoId = item.id.videoId;
             videoOutput = '<li><iframe height="'+videoHeight+'" width="'+videoWidth+'" src=\"//www.youtube.com/embed/'+videoId+'\"></iframe></li>';
-            $('#VideoResults').append(videoOutput);
-            console.log("js!")
+            var pageSource = $('#video-template').html();
+            var compiledTemplate = Handlebars.compile(pageSource);
+            var context = {"title": videoTitle};
+            var html = compiledTemplate(context);
+            $('#VideoResults').append(html).append(videoOutput);
           });
         }
       )
     })
   };
+
   videoList.getRuby = function() {
     $('body').on('click', '#ruby', function(){
       emptyResults();
@@ -98,8 +102,11 @@
             videoTitle = item.snippet.title;
             videoId = item.id.videoId;
             videoOutput = '<li><iframe height="'+videoHeight+'" width="'+videoWidth+'" src=\"//www.youtube.com/embed/'+videoId+'\"></iframe></li>';
-            $('#VideoResults').append(videoOutput);
-            console.log("ruby!!")
+            var pageSource = $('#video-template').html();
+            var compiledTemplate = Handlebars.compile(pageSource);
+            var context = {"title": videoTitle};
+            var html = compiledTemplate(context);
+            $('#VideoResults').append(html).append(videoOutput);
           });
         }
       )
@@ -119,17 +126,20 @@
         function(data) {
           var videoOutput;
           $.each(data.items, function(i, item) {
-            console.log(item);
             videoTitle = item.snippet.title;
             videoId = item.id.videoId;
             videoOutput = '<li><iframe height="'+videoHeight+'" width="'+videoWidth+'" src=\"//www.youtube.com/embed/'+videoId+'\"></iframe></li>';
-            $('#VideoResults').append(videoOutput);
-            console.log("python!!")
+            var pageSource = $('#video-template').html();
+            var compiledTemplate = Handlebars.compile(pageSource);
+            var context = {"title": videoTitle};
+            var html = compiledTemplate(context);
+            $('#VideoResults').append(html).append(videoOutput);
           });
         }
       )
     })
   };
+
   videoList.getObjC = function() {
     $('body').on('click', '#objectivec', function(){
       emptyResults();
@@ -143,17 +153,20 @@
         function(data) {
           var videoOutput;
           $.each(data.items, function(i, item) {
-            console.log(item);
             videoTitle = item.snippet.title;
             videoId = item.id.videoId;
             videoOutput = '<li><iframe height="'+videoHeight+'" width="'+videoWidth+'" src=\"//www.youtube.com/embed/'+videoId+'\"></iframe></li>';
-            $('#VideoResults').append(videoOutput);
-            console.log("objc!")
+            var pageSource = $('#video-template').html();
+            var compiledTemplate = Handlebars.compile(pageSource);
+            var context = {"title": videoTitle};
+            var html = compiledTemplate(context);
+            $('#VideoResults').append(html).append(videoOutput);
           });
         }
       )
     })
   };
+
   videoList.getSwift = function() {
     $('body').on('click', '#swift', function(){
       emptyResults();
@@ -167,12 +180,14 @@
         function(data) {
           var videoOutput;
           $.each(data.items, function(i, item) {
-            console.log(item);
             videoTitle = item.snippet.title;
             videoId = item.id.videoId;
             videoOutput = '<li><iframe height="'+videoHeight+'" width="'+videoWidth+'" src=\"//www.youtube.com/embed/'+videoId+'\"></iframe></li>';
-            $('#VideoResults').append(videoOutput);
-            console.log("swift!")
+            var pageSource = $('#video-template').html();
+            var compiledTemplate = Handlebars.compile(pageSource);
+            var context = {"title": videoTitle};
+            var html = compiledTemplate(context);
+            $('#VideoResults').append(html).append(videoOutput);
           });
         }
       )

@@ -40,18 +40,19 @@
           <ol>
             <li>Start Fresh</li>
               <p>
-                The first part of the code is a JQuery function that listens to the '#html' id as found in the web page as one of the Radio Controls. Once that form is clicked, it will run another JQuery statement to make sure that if a previous search result exists, "empty" them so that only the new query results are displayed.
+                The first part of the code is a JQuery function that finds to the '#html' id element as found in the web page as one of the Radio Controls. Once that form is clicked, it will run a statement to make sure that if a previous search result exists, to "emptyResults" so that only the new query results are displayed.
                 <img class="img-responsive" src="img/YouTubeCode1.png" alt="YouTubeCodeSample1" />
               </p>
             <li>Call the API</li>
               <p>
-                The next part of the code creates a "videoList.requestVideos" function that prepares an AJAX call with parameters to request videos:
+                The next part of the code prepares an API call with parameters to request videos:
                 <ol>
                   <li>$.get prepares the call.</li>
                   <li>A URL is specified to make the API call.</li>
                   <li>'part' describes how the data properties are delivered in the response, in this case it is comma separated list, or a "snippet".</li>
-                  <li>'maxResults' displays the maximum number of videos to display</li>
-                  <li>'viewCount' is specifing the number of views a video has as one of the search criteria. Or, show me videos with the highest view count.</li>
+                  <li>'maxResults' displays the maximum number of videos to display.</li>
+                  <li>'q' is the query string used to perform the search.</li>
+                  <li>'order' organizes the videos by its 'viewCount'. Or, show me videos with the highest view count.</li>
                   <li>'key' is the authorization key to ask for a request.</li>
                 </ol>
                 <img class="img-responsive" src="img/YouTubeCode2.png" alt="YouTubeCodeSample2" />
@@ -62,10 +63,9 @@
                 <ol>
                   <li>A variable called videoOutput is created to store the data to be displayed.</li>
                   <li>$.each goes through each item returned in the response.</li>
-                  <li>videoId returns the videoId (the actual video in YouTube) collected from the resonse.</li>
+                  <li>videoId returns the Video Id (the actual video in YouTube) collected from the response.</li>
                   <li>videoId is then referenced by the videoOutput variable.</li>
-                  <li>The videoOutput variable (with the video ID) is then passed to the web browser using a JQuery function.</li>
-                  <li>The last line of this code calls (or executes) the videoList.requestVideos function.</li>
+                  <li>The videoOutput variable (with the video ID) is then passed to the web browser with a JQuery function.</li>
                 </ol>
                 <img class="img-responsive" src="img/YouTubeCode3.png" alt="YouTubeCodeSample3" />
               </p>
