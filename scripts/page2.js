@@ -32,7 +32,7 @@
             videoId = item.id.videoId;
             videoOutput = '<li><iframe height="' + videoHeight + '" width="' + videoWidth + '" src=\"//www.youtube.com/embed/' + videoId + '\"></iframe></li>';
             $('.videoResults').append(videoOutput);
-            $('.jsonData').append().text(item.snippet.title);
+            $('.jsonData').append(videoTitle);
               });
             });
           }
