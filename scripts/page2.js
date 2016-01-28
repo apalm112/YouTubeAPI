@@ -7,10 +7,8 @@
 
   videoShow.customQuery = function() {
     $('body').on('click', '.button', function() {
-
       var $firstParam = $('.inputOne').val();
       var $secondParam = $('.inputTwo').val();
-      if ($secondParam === ''){ return alert("please enter key")}
 
       firstInput.push($firstParam);
       secondInput.push($secondParam);
