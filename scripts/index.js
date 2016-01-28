@@ -1,7 +1,7 @@
 (function (module) {
   var videoList = {};
-  var videoHeight = 900;
-  var videoWidth = 900;
+  var videoHeight = 400;
+  var videoWidth = 800;
 
   videoList.getHTML = function() {
     $('body').on('click', '#html', function(e) {
@@ -32,7 +32,7 @@
       )
     })
   };
-  
+
   videoList.getCSS = function() {
     $('body').on('click', '#css', function() {
       emptyResults();
