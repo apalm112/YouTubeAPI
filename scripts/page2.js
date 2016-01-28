@@ -7,8 +7,6 @@
 
   videoShow.customQuery = function() {
     $('body').on('click', '.button', function() {
-
-      $('.videoResults').empty();
       var $firstParam = $('.inputOne').val();
       var $secondParam = $('.inputTwo').val();
 
@@ -23,12 +21,13 @@
         {
           part: 'snippet',
           maxResults: 1,
-          q: $firstParam+$secondParam,
+          q: $firstParam,
           order: 'viewCount',
-          key: 'AIzaSyCPIPcf2n-VyIyKO8KpMMMv5Ap2VxU_Tis'
+          key: $secondParam
         },
       function(data) {
         var videoOutput;
+        $('.videoResults').empty();
         $.each(data.items, function(i, item) {
           videoTitle = item.snippet.title;
           videoId = item.id.videoId;
