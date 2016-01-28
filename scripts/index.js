@@ -23,7 +23,7 @@
             var compiledTemplate = Handlebars.compile(pageSource);
             var context = {"title": videoTitle};
             var html = compiledTemplate(context);
-            $('#VideoResults').append(html).append(videoOutput);
+            $('#VideoDisplay').append(html).append(videoOutput);
           });
         }
       )
@@ -50,7 +50,7 @@
             var compiledTemplate = Handlebars.compile(pageSource);
             var context = {"title": videoTitle};
             var html = compiledTemplate(context);
-            $('#VideoResults').append(html).append(videoOutput);
+            $('#VideoDisplay').append(html).append(videoOutput);
           });
         }
       )
@@ -70,7 +70,6 @@
         function(data) {
           var videoOutput;
           $.each(data.items, function(i, item) {
-            console.log(item);
             videoTitle = item.snippet.title;
             videoId = item.id.videoId;
             videoOutput = '<li><iframe height="'+videoHeight+'" width="'+videoWidth+'" src=\"//www.youtube.com/embed/'+videoId+'\"></iframe></li>';
@@ -78,7 +77,7 @@
             var compiledTemplate = Handlebars.compile(pageSource);
             var context = {"title": videoTitle};
             var html = compiledTemplate(context);
-            $('#VideoResults').append(html).append(videoOutput);
+            $('#VideoDisplay').append(html).append(videoOutput);
           });
         }
       )
@@ -98,7 +97,6 @@
         function(data) {
           var videoOutput;
           $.each(data.items, function(i, item) {
-            console.log(item);
             videoTitle = item.snippet.title;
             videoId = item.id.videoId;
             videoOutput = '<li><iframe height="'+videoHeight+'" width="'+videoWidth+'" src=\"//www.youtube.com/embed/'+videoId+'\"></iframe></li>';
@@ -106,7 +104,7 @@
             var compiledTemplate = Handlebars.compile(pageSource);
             var context = {"title": videoTitle};
             var html = compiledTemplate(context);
-            $('#VideoResults').append(html).append(videoOutput);
+            $('#VideoDisplay').append(html).append(videoOutput);
           });
         }
       )
@@ -133,7 +131,7 @@
             var compiledTemplate = Handlebars.compile(pageSource);
             var context = {"title": videoTitle};
             var html = compiledTemplate(context);
-            $('#VideoResults').append(html).append(videoOutput);
+            $('#VideoDisplay').append(html).append(videoOutput);
           });
         }
       )
@@ -160,7 +158,7 @@
             var compiledTemplate = Handlebars.compile(pageSource);
             var context = {"title": videoTitle};
             var html = compiledTemplate(context);
-            $('#VideoResults').append(html).append(videoOutput);
+            $('#VideoDisplay').append(html).append(videoOutput);
           });
         }
       )
@@ -187,7 +185,7 @@
             var compiledTemplate = Handlebars.compile(pageSource);
             var context = {"title": videoTitle};
             var html = compiledTemplate(context);
-            $('#VideoResults').append(html).append(videoOutput);
+            $('#VideoDisplay').append(html).append(videoOutput);
           });
         }
       )
@@ -195,7 +193,7 @@
   };
 
  function emptyResults() {
-   $('#VideoResults').empty();
+   $('#VideoDisplay').empty();
  }
   module.videoList = videoList;
 })(window);
