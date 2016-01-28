@@ -1,9 +1,9 @@
 (function(module) {
   var videoShow = {};
-  var videoHeight = 375;
-  var videoWidth = 375;
-
-    $('.button').on('click', function() {
+  var videoHeight = 400;
+  var videoWidth = 800;
+  videoShow.customQuery = function() {
+    $('body').on('click', '.button', function() {
       console.log('button click');
       $('.videoResults').empty();
       var $firstParam = $('.inputOne').val();
@@ -11,10 +11,6 @@
 
       console.log($firstParam);
       console.log($secondParam);
-
-      videoShow.requestVid = function() {
-        var $firstParam = $('.inputOne').val();  //sets user input to variable
-        var $secondParam = $('.inputTwo').val();
         $.get(
           'https://www.googleapis.com/youtube/v3/search',
           {
@@ -36,7 +32,7 @@
               });
             });
           }
-          videoShow.requestVid();
-        })
+        )
+      };
   module.videoShow = videoShow;
 })(window);
