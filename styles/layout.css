@@ -16,3 +16,11 @@ iframe {
 .videoResults {
   list-style: none;
 }
+
+p.subhead {
+  font-size: 15px;
+  font-weight: 600;
+}
+.indent {
+  padding-left: 50px;
+}
