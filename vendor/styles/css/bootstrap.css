@@ -26,6 +26,8 @@ nav,
 section,
 summary {
   display: block;
+  padding-top: 5px;
+  padding-bottom: 20px;
 }
 audio,
 canvas,
