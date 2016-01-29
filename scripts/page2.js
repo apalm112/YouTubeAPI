@@ -28,14 +28,19 @@
         },
       function(data) {
         var videoOutput;
+        var codeModal;
         $('.videoResults').empty();
         $.each(data.items, function(i, item) {
           videoTitle = item.snippet.title;
           videoId = item.id.videoId;
           videoOutput = '<li><iframe height="' + videoHeight + '" width="' + videoWidth + '" src=\"//www.youtube.com/embed/' + videoId + '\"></iframe></li>';
+          codeModal = '<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">See JSON Query</button>';
+
           $('.videoResults').append(videoOutput);
           $('.jsonData').append(videoTitle);
-        });
+          $('.returnQ').append(codeModal)
+          $('.classBody').append("$.get('https://www.googleapis.com/youtube/v3/search',<br>{<br>part:\'snippet',<br> maxResults: 1,<br>q:\'" + $firstParam + "\',<br>order:\'viewCount',<br>key:\'" + $secondParam +"\' }, function(data) {console.log(data)})");
+          });
       });
     })
   };

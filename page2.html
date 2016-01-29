@@ -90,15 +90,41 @@
           <input class="inputOne" type="text" placeholder="Search options" name="inputOne">
           <input class="inputTwo" type="text" placeholder="API Key" name="inputTwo">
           <input type="submit" value="Submit" class="button">
+                    <p class="returnQ"></p>
         </section>
+
         <section class="videoResults">
+          <p class="returnQ">
+
+          </p>
+
           <ul id="searchResults"></ul>
         </section>
 
       </section>
            <p class="jsonData"></p>
+           <div class="modal fade" id="myModal" role="dialog">
+             <div class="modal-dialog">
 
+               <!-- Modal content-->
+               <div class="modal-content">
+                 <div class="modal-header">
+                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   <h4 class="modal-title">Modal Header</h4>
+                 </div>
+                 <div class="modal-body">
+                   <p class="classBody"></p>
+                 </div>
+                 <div class="modal-footer">
+                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                 </div>
+               </div>
+
+             </div>
+           </div>
     </main>
+    <!-- Modal -->
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
     <script src="vendor/styles/js/bootstrap.js"></script>
