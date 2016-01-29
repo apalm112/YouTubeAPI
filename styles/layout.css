@@ -12,3 +12,7 @@ iframe {
   max-width: 90%;
 }
 *{font-family: Raleway;}
+
+.videoResults {
+  list-style: none;
+}
